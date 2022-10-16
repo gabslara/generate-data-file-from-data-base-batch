@@ -19,9 +19,9 @@ import java.io.IOException;
 import java.io.Writer;
 
 @Configuration
-public class JobFileWriterConfig {
+public class BatchFileWriterConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(JobJdbcReaderConfig.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BatchJdbcReaderConfig.class);
 
     @Autowired
     FileFormat fileFormat;
@@ -31,7 +31,7 @@ public class JobFileWriterConfig {
     @StepScope
     @Bean
     public FlatFileItemWriter<PessoaEntity> pessoaEntityItemWriter(
-            @Value("#jobParameters[path]}") String pathDestination) {
+            @Value("#{jobParameters[pathDestination]}") String pathDestination) {
 
         LOG.info("Iniciando o Writer");
 

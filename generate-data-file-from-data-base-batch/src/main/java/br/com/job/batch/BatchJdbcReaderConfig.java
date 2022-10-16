@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class JobJdbcReaderConfig {
+public class BatchJdbcReaderConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(JobJdbcReaderConfig.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BatchJdbcReaderConfig.class);
 
     @StepScope
     @Bean
